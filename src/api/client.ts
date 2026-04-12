@@ -2,7 +2,7 @@ import { Task, TaskCreateRequest, TaskPatchRequest, WindowSchema, TaskFilters, P
 import { normalizeDateFilters } from "../utils/date";
 
 // @ts-ignore
-const API_URL = (typeof process !== 'undefined' ? process.env.NEXT_PUBLIC_API_URL : null) || import.meta.env.VITE_API_URL || "http://localhost:8080";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
 
 export class ApiError extends Error {
   constructor(public status: number, message: string, public validationError?: any) {
