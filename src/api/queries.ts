@@ -14,7 +14,16 @@ export function useTasks(filters: TaskFilters) {
       }),
     initialPageParam: undefined as { lastId: number; lastDate: string } | undefined,
     getNextPageParam: (lastPage) => {
-      if (lastPage.last || lastPage.empty) return undefined;
+      // Si no hay página o no hay contenido, no hay siguiente
+      if (!lastPage || !lastPage.content || lastPage.content.length === 0) {
+        return undefined;
+      }
+    
+      // Si la API marca que es la última página
+      if (lastPage.last || lastPage.empty) {
+        return undefined;
+      }
+    
       const lastItem = lastPage.content[lastPage.content.length - 1];
       return { lastId: lastItem.id, lastDate: lastItem.creationDate };
     },
