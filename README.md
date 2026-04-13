@@ -1,4 +1,4 @@
-# TaskFlow - Gestor de Tareas de Próxima Generación
+# Simple task - Gestor de Tareas
 
 Este proyecto surge para entender y probar como se integra una api con el front-end. Al igual que mi api de tasks, no busca ser una solución real a un problema de negocio real, si no simplemente entender el proceso de desarrollo. El código inicial está generado enteramente por IA, y sólo hice pequeñas modificaciones para que tenga compatibilidad con la api. Generé un prompt estructurado en etapas pidiendo los archivos necesarios para la página. Para la creación del prompt investigué con otras herramientas de IA secundarias qué era lo más convenienta en este caso particular. El resultado utiliza las tecnologías más modernas de frontend para garantizar una experiencia de usuario fluida, reactiva y robusta.
 
